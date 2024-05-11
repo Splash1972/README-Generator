@@ -1,21 +1,20 @@
-# Colin's ReadMe generator
+# Colin's Readme Generator
   ![Github license](https://img.shields.io/badge/license--blue.svg)
-  https://www.npmjs.com/search?q=
+  ![Licence Link](https://www.npmjs.com/search?q=)
 # Description
-This is my attempt to create a Readme file generator using node
+This is my attempt to create a Readme file using node.
 # Deployed Application URL
 https://github.com/Splash1972/README-Generator/tree/Splash1972/Develop
 # Table of Contents
 
 * [Features](#features)
-* [Languages & Dependencies](#languages-&-dependencies)
+* [Languages & Dependencies](#languages-and-dependencies)
 * [Contributors](#contributors)
-* [Testing](#testing)
 * [Questions](#questions)
 
 # Features
-I'm attempting to put clickable links in the table of contents
-# Languages & Dependencies
+I'm attempting to put clickable links in the table of contents and to make the badge appear correctly.
+# Languages And Dependencies
 JavaScript and Node.  Also inquirer is needed to use prompts.
 # Contributors
 Me

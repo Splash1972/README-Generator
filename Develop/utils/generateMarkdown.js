@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== "none") {
-    return `https://www.npmjs.com/search?q=${license}`;
+    return `![Licence Link](https://www.npmjs.com/search?q=${license})`;
   }
   return "";
 }
@@ -22,7 +22,7 @@ function renderLicenseSection(license) {
   if (typeof license !== 'string' || license === 'none') {
     return '';
   }
-  return `## License
+  return `# License
 
 ${license}
 
@@ -41,14 +41,13 @@ ${data.link}
 # Table of Contents
 
 * [Features](#features)
-* [Languages & Dependencies](#languages-&-dependencies)
+* [Languages & Dependencies](#languages-and-dependencies)
 * [Contributors](#contributors)
-* [Testing](#testing)
 * [Questions](#questions)
 
 # Features
 ${data.features}
-# Languages & Dependencies
+# Languages And Dependencies
 ${data.language}
 # Contributors
 ${data.contributors}
