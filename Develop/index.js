@@ -4,19 +4,6 @@ const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 const path = require("path");
 
-// inquirer
-//   .prompt([
-//     {
-//       type: "input",
-//       message: "What will the title be for your README file?",
-//       name: "readMeTitle",
-//     }
-//   ])
-//   .then((response) =>
-//     console.log(`Your response was ${response.readMeTitle}`)
-//   );
-
-
 // TODO: Create an array of questions for user input
 
 const questions = [
@@ -81,7 +68,7 @@ const writeToFile = (data) => {
 function init() {
   inquirer.prompt(questions).then((responses) => {
     console.log("Creating README.md file...");
-    writeToFile("./README.md", generateMarkdown({ ...responses}));
+    writeToFile(generateMarkdown({ ...responses}));
   });
 }
 // Function call to initialize app
