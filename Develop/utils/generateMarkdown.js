@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== "none") {
-    return `![Licence Link](https://www.npmjs.com/search?q=${license})`;
+    return `[Licence Link](https://www.npmjs.com/search?q=${license})`;
   }
   return "";
 }
@@ -34,10 +34,13 @@ function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
   ${renderLicenseLink(data.license)}
+
 # Description
 ${data.description}
+
 # Deployed Application URL
 ${data.link}
+
 # Table of Contents
 
 * [Features](#features)

@@ -26,7 +26,13 @@ const questions = [
     type: "checkbox",
     name: "license",
     message: "Please select a license applicable to this project.",
-    choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3", "none"],
+    choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3"],
+    validate: function (value) {
+      if (!value.length) {
+        return "Please select at least one license.";
+      }
+      return true;
+    },
   },
   {
     type: "input",
@@ -57,19 +63,15 @@ const questions = [
 
 // TODO: Create a function to write README file
 
-const writeToFile = (data) => {
-    fs.writeFile('README.md', data, (err) => {
-        err ? console.error(err) : console.log('added to README.md')
-    })
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-
-// TODO: Create a function to initialize app
+// Initializing app
 function init() {
   inquirer.prompt(questions).then((responses) => {
-    console.log("Creating README.md file...");
-    writeToFile(generateMarkdown({ ...responses}));
+    console.log("Creating README.md File...");
+    writeToFile("README.md", generateMarkdown({ ...responses }));
   });
 }
-// Function call to initialize app
 init();
