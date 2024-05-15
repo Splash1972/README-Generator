@@ -23,3 +23,6 @@ JavaScript and Node.  Inquirer is used for the user prompts.
 Me
 # Questions
 Please send your questions [here](mailto:colindrums@me.com?subject=[GitHub]%20Dev%20Connect) or visit [github/Splash1972](https://github.com/Splash1972).
+
+Video Walkthrough link: https://drive.google.com/file/d/1ahJWHPrXUwTdui4_H_CMTA2U2FXI7Ci1/view
+(added after the generator, since the link was created after the walkthrough)
